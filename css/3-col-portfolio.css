@@ -3,62 +3,76 @@ body {
 	background-color: #FCFCFC;
 }
 
-.community-name, .news-item, .selector-arrow-container {
-	border-style: solid;
-	border-width: 1px;
-	border-color: #e5e1e1;
-}
+/* page header, community selector */
 
-.page-header, .community-selector, .community-name, .selector-arrow-container {
+.page-header, .community-select {
+	float: left;
 	display: inline-block;
 }
 
-.community-selector {
-	height: 30px;
-}
-
-.community-name, .selector-arrow-container, .news-item {
-	background-color: #FFFFFF;
-}
-
-.community-name {
-	color: #FD7752;
-	font-size: 20px;
-	
-	padding-left: 5px;
-	padding-right: 5px;
-	margin-left: 10px;
-	
-	border-radius: 3px 0px 0px 3px;
-}
-
-.selector-arrow-container {
+.community-select {
 	position: absolute;
-	top: 34px;
-	height: 30px;
-	font-size: 16px;
-	color: #b7b4b4;
-	padding: 0px 4px 0px 4px;
-	margin-left: -1px;
-	margin-top: -3px;
-	border-radius: 0px 3px 3px 0px;
+	margin-left: 10px;
+	margin-top: 25px;
+	width: 180px;
+    border: 1px solid #e5e1e1;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #ffffff;
 }
 
-.selector-arrow {
-	top: 5px;
+.community-select select {
+	color: #FD7752;
+	width: 100%;
+	font-size: 22px;
+    padding-left: 5px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
 }
 
-.selector-arrow:hover {
-	color: #494848;
+.community-select select:focus {
+    outline: none;
 }
+
+.select-side {
+	pointer-events: none;
+	position: absolute;
+	height: 100%;
+	width: 40px;
+	top: -3px;
+	left: 140px;
+}
+
+.select-side i {
+	left: 30%;
+	top: 12px;
+	color: #999999;
+}
+
+.community-select:hover i {
+	color: #000000;
+}
+
+.community-select:hover {
+	border-color: #999999;
+}
+
+/* news items */
 
 .news-container {
 	padding-bottom: 20px;
 }
 
 .news-item {
+	background-color: #FFFFFF;
 	padding: 0 20px 20px 20px;		
 	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #e5e1e1;
 }
 
 .news-title {
@@ -72,6 +86,8 @@ body {
 .additional-info {
 	color: #999999;
 }
+
+/* miscellaneous */
 
 footer {
     margin: 50px 0;
