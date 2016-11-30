@@ -9,6 +9,18 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
 body {
   margin: 0;
 }
@@ -4549,6 +4561,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #e7e7e7;
 }
 @media (max-width: 767px) {
+	 .navbar-right {
+    float: left !important;
+    margin-right: -15px;
+  }
+	
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777;
   }
