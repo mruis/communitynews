@@ -43,8 +43,7 @@
                     <li>
                         <a href="map.html">Map view</a>
                     </li>
-                    <li>
-                        <a href="#">Add news</a>
+                    <li class="addbtn" onclick="document.getElementById('add').style.display='block'"><a href="#">Add news</a>
                     </li>
 
                 </ul>
@@ -231,12 +230,43 @@
     </div>
     <!-- /.container -->
 	
+    <!--Modal window for adding a news item-->
+    <div id="add" class="modal">
+        <div class="modal-content animate-zoom">
+            <div class="container">
+                <a><span onclick="document.getElementById('add').style.display='none'" class="button.close">X</span></a>
+				<h2>Add news</h2>
+					<div class="status-upload">
+						<form>
+							<textarea placeholder="News content" ></textarea>
+								<ul>
+								<a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
+								<!--<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>-->
+								</ul>
+								<class="pub" id="publish">
+								<button type="submit" onclick="document.getElementById('add').style.display='none'" class="btn btn-success green"><i class="fa fa-share"></i> Publish</button>
+								<button type="submit" onclick="document.getElementById('add').style.display='none'" class="btn btn-success green"><i class="fa fa-share"></i> Cancel</button>
+								</class>
+						</form>
+						<div class="col-sm-12"><br></div>
+					</div><!-- Status Upload  -->
+				</div>
+            </div>
+        </div>
+    </div>
+	
 	<div id="footer">
 		<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
 			<div class="row" id="bottomNav">
+<<<<<<< HEAD
 				<div class="col-xs-3 text-center"><a href="index.html"><i class="glyphicon glyphicon-list"></i><br>List</a></div>
 				<div class="col-xs-3 text-center"><a href="map.html"><i class="glyphicon glyphicon-map-marker"></i><br>Map</a></div>
 				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-plus-sign"></i><br>Add</a></div>
+=======
+				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-list"></i><br>List</a></div>
+				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-map-marker"></i><br>Map</a></div>
+				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-plus-sign"></i><span class="addbtn" onclick="document.getElementById('add').style.display='block'"><br>Add</span></li></div>
+>>>>>>> origin/master
 				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-search"></i><br>Search</a></div>
 			</div>
 		</div>

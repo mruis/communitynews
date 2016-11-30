@@ -4,6 +4,13 @@ body {
 }
 
 /* page header, community selector, news are selector */
+.addbtn{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+	text-color: white;
+}
 
 .area-select{
 	position: absolute;
@@ -114,6 +121,93 @@ body {
 
 .additional-info {
 	color: #999999;
+}
+
+/*Adding news modal */
+
+
+.modal{
+	z-index:3;
+	display:none;
+	padding-top:100px;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.4);
+}
+
+.modal-content{
+	margin:auto;
+	background-color:#fff;
+	position:relative;
+	padding:0;
+	outline:0;
+	width:50%;
+}
+
+.status-upload form textarea {
+background: none repeat scroll 0 0 #fff;
+border: medium none;
+color: #777777;
+font-size: 14px;
+padding: 20px;
+resize:vertical;
+outline:none;
+border: 1px solid #F2F2F2;
+height: 110px;
+letter-spacing: 0.3px;
+padding: 20px;
+width: 100%;
+}
+
+.status-upload {
+background: none repeat scroll 0 0 #fff;
+float: left;
+width: 50%;
+}
+
+.form{
+padding: 0 0 0 15px;
+}
+
+.status-upload form {
+float: left;
+width: 100%;
+}
+
+
+.status-upload ul {
+float: left;
+list-style: none osutside none;
+margin: 0;
+padding: 0 0 0 15px;
+width: auto;
+}
+
+.status-upload ul > li > a:hover {
+background: none repeat scroll 0 0 #606060;
+color: #fff;
+}
+
+#publish{
+float: right;
+border: 0 20 0 20px;
+}
+
+.status-upload form button {
+/*float: right;*/
+border: medium none;
+color: #fff;
+border: medium none;
+font-size: 14px;
+}
+
+#white{
+background: none repeat scroll 0 0 #FFFFFF;
 }
 
 /* miscellaneous */
