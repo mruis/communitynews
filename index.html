@@ -235,18 +235,22 @@
         <div class="modal-content animate-zoom">
             <div class="container">
                 <a><span onclick="document.getElementById('add').style.display='none'" class="button.close">X</span></a>
-					<h2>Here will be a news editing</h2>
-								<div class="status-upload">
-									<form>
-										<textarea placeholder="What are you doing right now?" ></textarea>
-										<ul>
-											<li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-											<!--<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>-->
-										</ul>
-										<button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
-									</form>
-								</div><!-- Status Upload  -->
-						</div>
+				<h2>Add news</h2>
+					<div class="status-upload">
+						<form>
+							<textarea placeholder="News content" ></textarea>
+								<ul>
+								<a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
+								<!--<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>-->
+								</ul>
+								<class="pub" id="publish">
+								<button type="submit" onclick="document.getElementById('add').style.display='none'" class="btn btn-success green"><i class="fa fa-share"></i> Publish</button>
+								<button type="submit" onclick="document.getElementById('add').style.display='none'" class="btn btn-success green"><i class="fa fa-share"></i> Cancel</button>
+								</class>
+						</form>
+						<div class="col-sm-12"><br></div>
+					</div><!-- Status Upload  -->
+				</div>
             </div>
         </div>
     </div>
