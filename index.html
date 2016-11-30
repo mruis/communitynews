@@ -43,8 +43,7 @@
                     <li>
                         <a href="#">Map view</a>
                     </li>
-                    <li>
-                        <a href="#">Add news</a>
+                    <li class="addbtn" onclick="document.getElementById('add').style.display='block'"><a href="#">Add news</a>
                     </li>
 
                 </ul>
@@ -231,12 +230,33 @@
     </div>
     <!-- /.container -->
 	
+    <!--Modal window for adding a news item-->
+    <div id="add" class="modal">
+        <div class="modal-content animate-zoom">
+            <div class="container">
+                <a><span onclick="document.getElementById('add').style.display='none'" class="button.close">X</span></a>
+					<h2>Here will be a news editing</h2>
+								<div class="status-upload">
+									<form>
+										<textarea placeholder="What are you doing right now?" ></textarea>
+										<ul>
+											<li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+											<!--<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>-->
+										</ul>
+										<button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+									</form>
+								</div><!-- Status Upload  -->
+						</div>
+            </div>
+        </div>
+    </div>
+	
 	<div id="footer">
 		<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
 			<div class="row" id="bottomNav">
 				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-list"></i><br>List</a></div>
 				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-map-marker"></i><br>Map</a></div>
-				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-plus-sign"></i><br>Add</a></div>
+				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-plus-sign"></i><span class="addbtn" onclick="document.getElementById('add').style.display='block'"><br>Add</span></li></div>
 				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-search"></i><br>Search</a></div>
 			</div>
 		</div>
