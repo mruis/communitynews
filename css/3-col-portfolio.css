@@ -206,8 +206,16 @@ border: medium none;
 font-size: 14px;
 }
 
-#white{
-background: none repeat scroll 0 0 #FFFFFF;
+#hl{
+background: none repeat scroll 0 0 #fff;
+border: medium none;
+color: #777777;
+font-size: 14px;
+padding: 20px;
+outline:none;
+border: 1px solid #F2F2F2;
+height: 30px;
+width: 100%;
 }
 
 /* miscellaneous */
