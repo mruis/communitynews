@@ -24,7 +24,6 @@ body {
 }
 
 .page-header, .community-select, .area-select {
-	float: left;
 	display: inline-block;
 }
 
@@ -70,11 +69,11 @@ body {
 	color: #999999;
 }
 
-.community-select:hover i {
+.community-select:hover i, .area-select:hover i {
 	color: #000000;
 }
 
-.community-select:hover {
+.community-select:hover, .area-select:hover {
 	border-color: #999999;
 }
 
@@ -123,7 +122,7 @@ body {
 	color: #999999;
 }
 
-/*Adding news modal */
+/* Adding news modal */
 
 
 .modal{
@@ -150,72 +149,71 @@ body {
 }
 
 .status-upload form textarea {
-background: none repeat scroll 0 0 #fff;
-border: medium none;
-color: #777777;
-font-size: 14px;
-padding: 20px;
-resize:vertical;
-outline:none;
-border: 1px solid #F2F2F2;
-height: 110px;
-letter-spacing: 0.3px;
-padding: 20px;
-width: 100%;
+	background: none repeat scroll 0 0 #fff;
+	border: medium none;
+	color: #777777;
+	font-size: 14px;
+	padding: 20px;
+	resize:vertical;
+	outline:none;
+	border: 1px solid #F2F2F2;
+	height: 110px;
+	letter-spacing: 0.3px;
+	padding: 20px;
+	width: 100%;
 }
 
 .status-upload {
-background: none repeat scroll 0 0 #fff;
-float: left;
-width: 50%;
+	background: none repeat scroll 0 0 #fff;
+	float: left;
+	width: 50%;
 }
 
 .form{
-padding: 0 0 0 15px;
+	padding: 0 0 0 15px;
 }
 
 .status-upload form {
-float: left;
-width: 100%;
+	float: left;
+	width: 100%;
 }
 
 
 .status-upload ul {
-float: left;
-list-style: none osutside none;
-margin: 0;
-padding: 0 0 0 15px;
-width: auto;
+	float: left;
+	list-style: none osutside none;
+	margin: 0;
+	padding: 0 0 0 15px;
+	width: auto;
 }
 
 .status-upload ul > li > a:hover {
-background: none repeat scroll 0 0 #606060;
-color: #fff;
+	background: none repeat scroll 0 0 #606060;
+	color: #fff;
 }
 
 #publish{
-float: right;
-border: 0 20 0 20px;
+	float: right;
+	border: 0 20 0 20px;
 }
 
 .status-upload form button {
-/*float: right;*/
-border: medium none;
-color: #fff;
-border: medium none;
-font-size: 14px;
+	border: medium none;
+	color: #fff;
+	border: medium none;
+	font-size: 14px;
 }
 
 #hl{
-background: none repeat scroll 0 0 #fff;
-border: medium none;
-color: #777777;
-font-size: 14px;
-padding: 20px;
-outline:none;
-border: 1px solid #F2F2F2;
-height: 30px;
-width: 100%;
+	background: none repeat scroll 0 0 #fff;
+	border: medium none;
+	color: #777777;
+	font-size: 14px;
+	padding: 20px;
+	outline:none;
+	border: 1px solid #F2F2F2;
+	height: 30px;
+	width: 100%;
 }
 
 /* miscellaneous */
