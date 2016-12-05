@@ -4,7 +4,12 @@ body {
 }
 
 /* page header, community selector, news area selector */
-.addbtn{
+
+.page-header {
+	display: inline-block;
+}
+
+.addbtn {
     background:none;
     border:none;
     margin:0;
@@ -12,25 +17,8 @@ body {
 	text-color: white;
 }
 
-.area-select{
-	position: absolute;
-	margin-left: 200px;
-	margin-top: 25px;
-	width: 180px;
-    border: 1px solid #e5e1e1;
-    border-radius: 3px;
-    overflow: hidden;
-    background: #ffffff;
-}
-
-.page-header, .community-select, .area-select {
+.community-area-select {
 	display: inline-block;
-}
-
-.community-select {
-	position: absolute;
-	margin-left: 10px;
-	margin-top: 25px;
 	width: 180px;
     border: 1px solid #e5e1e1;
     border-radius: 3px;
@@ -38,7 +26,7 @@ body {
     background: #ffffff;
 }
 
-.community-select select, .area-select select {
+.community-area-select select {
 	color: #FD7752;
 	width: 100%;
 	font-size: 22px;
@@ -50,7 +38,7 @@ body {
     -webkit-appearance: none;
 }
 
-.community-select select:focus, .area-select select:focus {
+.community-area-select select:focus {
     outline: none;
 }
 
@@ -59,21 +47,19 @@ body {
 	position: absolute;
 	height: 100%;
 	width: 40px;
-	top: -3px;
-	left: 140px;
 }
 
 .select-side i {
-	left: 30%;
-	top: 12px;
+	left: 155px;
+	top: 8px;
 	color: #999999;
 }
 
-.community-select:hover i, .area-select:hover i {
+.community-area-select:hover i {
 	color: #000000;
 }
 
-.community-select:hover, .area-select:hover {
+.community-area-select:hover{
 	border-color: #999999;
 }
 
@@ -107,8 +93,6 @@ body {
 		opacity: 1;
     }
 }
-
-
 
 .news-title {
 	margin-bottom: 0px;
