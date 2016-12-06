@@ -7,6 +7,8 @@ body {
 
 .page-header {
 	display: inline-block;
+	padding-right: 15px;
+	padding-bottom: 0px;
 }
 
 .addbtn {
@@ -24,6 +26,9 @@ body {
     border-radius: 3px;
     overflow: hidden;
     background: #ffffff;
+	margin-top: 5px;
+	margin-bottom: -5px;
+	margin-right: 5px;
 }
 
 .community-area-select select {
