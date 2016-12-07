@@ -111,12 +111,19 @@ body {
 	color: #999999;
 }
 
-/* Adding news modal */
-
-#addnewscontainer{
-	min-width: 250px;
+.news-image {
+	padding-bottom: 10px;
 }
 
+/* Adding news modal */
+
+.modal-content {
+	min-width: 300px;
+}
+
+.gray {
+	background-color: lightgray;
+}
 
 .modal{
 	z-index:3;
@@ -222,4 +229,12 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+.glyphicon-heart {
+	font-size: 1.1em;
+}
+
+.glyphicon-heart:hover, .glyphicon-heart:active {
+	color: #cc0000;	
 }
