@@ -3,6 +3,12 @@ body {
 	background-color: #FCFCFC;
 }
 
+@media only screen and (max-width: 990px) {
+    .navbar-form {
+        width: 25%;
+    }
+}
+
 /* page header, community selector, news area selector */
 
 .page-header {
