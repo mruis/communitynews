@@ -111,7 +111,7 @@
 				<div class="news-item">
 					<h3 class="news-title">Javascript teaching on 5th December</h3>
 					<small class="additional-info">at Sesamestreet 35</small>
-					<p class="news-content">Ever wanted to learn Javascript? Now is your time! We will cover all the basics of Javascript 
+					<p class="news-content comment more">Ever wanted to learn Javascript? Now is your time! We will cover all the basics of Javascript 
 					and have a little look at the popular frameworks such as jQuery and React.</p>
 					<img class="img-responsive news-image" src="https://d24wuq6o951i2g.cloudfront.net/img/events/id/197/1979732/assets/5f6.hackathon.jpg" alt="">
 					<div class="row">
@@ -137,10 +137,11 @@
 				<div class="news-item">
 					<h3 class="news-title">Long news are cut</h3>
 					<small class="additional-info">at Monte Christo Road 13</small>
-					<p class="news-content">The path of the righteous man is beset on all sides by the iniquities of the selfish and the 
-					tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley 
-					of darkness, for he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee 
-					with great vengeance and furious anger those who would attempt...</p>
+					<p class="news-content comment more">The path of the righteous man is beset on all sides by the inequities of the selfish 
+					and the tyranny of evil men. Blessed is he, who in the name of charity and good will, shepherds the weak through the valley 
+					of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with 
+					great vengeance and furious anger those who would attempt to poison and destroy my brothers. And you will know my name is 
+					the Lord when I lay my vengeance upon thee.</p>
 					<div class="row">
 						<div class="col-xs-9"><small class="additional-info">4 hours ago by James Jameson</small></div>
 						<div class="col-xs-3 text-right"><span class="glyphicon glyphicon-heart"></span> 5</div>
@@ -283,6 +284,41 @@
 	<script>
 		$( ".glyphicon-heart" ).click(function() {
 		  $( this ).css( "color", "#cc0000" );
+		});
+		
+		$(document).ready(function() {
+			var showChar = 400;
+			var text = "...";
+			var moretext = "read more";
+			var lesstext = "";
+			$('.more').each(function() {
+				var content = $(this).html();
+
+				if(content.length > showChar) {
+
+					var c = content.substr(0, showChar);
+					var h = content.substr(showChar, content.length - showChar+1);
+
+					var html = c + '<span class="more">' + text+ '&nbsp;</span><span class="morecontent"><span>' + h 
+					+ '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+					$(this).html(html);
+				}
+
+			});
+
+			$(".morelink").click(function(){
+				if($(this).hasClass("less")) {
+					$(this).removeClass("less");
+					$(this).html(moretext);
+				} else {
+					$(this).addClass("less");
+					$(this).html(lesstext);
+				}
+				$(this).parent().prev().toggle();
+				$(this).prev().toggle();
+				return false;
+			});
 		});
 	</script>
 	

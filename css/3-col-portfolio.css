@@ -115,6 +115,16 @@ body {
 	padding-bottom: 10px;
 }
 
+/* See more link for news */
+
+a.morelink {
+	text-decoration:none;
+	outline: none;
+}
+.morecontent span {
+	display: none;
+}
+
 /* Adding news modal */
 
 .modal-content {
