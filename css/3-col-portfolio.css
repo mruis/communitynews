@@ -254,3 +254,7 @@ footer {
 .glyphicon-heart:hover, .glyphicon-heart:active {
 	color: #cc0000;	
 }
+
+#map {
+	height: 500px;
+}

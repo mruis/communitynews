@@ -106,12 +106,8 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-12 news-container">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29485.315973486!2d17.025849463507445!3d-22.51676765192547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b1dcefb86199f%3A0xf976c052c87022a8!2sBig+Bend%2C+Windhoek%2C+Namibia!5e0!3m2!1sfi!2sfi!4v1480511411424" 
-				width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-
-			</div>
-            
+				<div id="map"></div>
+			</div>    
         </div>
         <!-- /.row -->
 		
@@ -155,10 +151,74 @@
 			</div>
 		</div>
 	</div>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<script>
+
+	function initMap() {
+		var jsNewsLatLng = {lat: -22.510342, lng: 17.030343};
+		var carCrashLatLng = {lat: -22.504031, lng: 17.035821};
+		var centerLatLng = {lat: -22.523295, lng: 17.040125};
+		
+		var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3>Javascript teaching on 5th Dec</h3>'+
+            '<div id="bodyContent">'+
+            '<p>Ever wanted to learn Javascript? Now is your time! We will cover all the basics of Javascript'+
+			'and have a little look at the popular frameworks such as jQuery and React.</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 200
+        });
+		
+		var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3>Car crash</h3>'+
+            '<div id="bodyContent">'+
+            '<p>Car crash happened here. None were hurt luckily.</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow2 = new google.maps.InfoWindow({
+          content: contentString2,
+          maxWidth: 200
+        });
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+		  zoom: 13,
+		  center: centerLatLng
+		});
+
+		var marker = new google.maps.Marker({
+		  position: jsNewsLatLng,
+		  map: map,
+		  title: 'Javascript teaching'
+		});
+		marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+		var marker2 = new google.maps.Marker({
+		  position: carCrashLatLng,
+		  map: map,
+		  title: 'Car crash'
+		});
+		marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+        });
+	}
+    </script>
+	
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIKqr-Xd5dg9OE-_vBGuk2oJzVWCRKY6k&callback=initMap">
+    </script>
   </body>
 </html>
