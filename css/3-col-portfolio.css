@@ -3,8 +3,15 @@ body {
 	background-color: #FCFCFC;
 }
 
-/* page header, community selector, news are selector */
-.addbtn{
+/* page header, community selector, news area selector */
+
+.page-header {
+	display: inline-block;
+	padding-right: 15px;
+	padding-bottom: 0px;
+}
+
+.addbtn {
     background:none;
     border:none;
     margin:0;
@@ -12,34 +19,19 @@ body {
 	text-color: white;
 }
 
-.area-select{
-	position: absolute;
-	margin-left: 200px;
-	margin-top: 25px;
-	width: 180px;
-    border: 1px solid #e5e1e1;
-    border-radius: 3px;
-    overflow: hidden;
-    background: #ffffff;
-}
-
-.page-header, .community-select, .area-select {
-	float: left;
+.community-area-select {
 	display: inline-block;
-}
-
-.community-select {
-	position: absolute;
-	margin-left: 10px;
-	margin-top: 25px;
 	width: 180px;
     border: 1px solid #e5e1e1;
     border-radius: 3px;
     overflow: hidden;
     background: #ffffff;
+	margin-top: 5px;
+	margin-bottom: -5px;
+	margin-right: 5px;
 }
 
-.community-select select, .area-select select {
+.community-area-select select {
 	color: #FD7752;
 	width: 100%;
 	font-size: 22px;
@@ -51,7 +43,7 @@ body {
     -webkit-appearance: none;
 }
 
-.community-select select:focus, .area-select select:focus {
+.community-area-select select:focus {
     outline: none;
 }
 
@@ -60,21 +52,19 @@ body {
 	position: absolute;
 	height: 100%;
 	width: 40px;
-	top: -3px;
-	left: 140px;
 }
 
 .select-side i {
-	left: 30%;
-	top: 12px;
+	left: 155px;
+	top: 8px;
 	color: #999999;
 }
 
-.community-select:hover i {
+.community-area-select:hover i {
 	color: #000000;
 }
 
-.community-select:hover {
+.community-area-select:hover{
 	border-color: #999999;
 }
 
@@ -109,8 +99,6 @@ body {
     }
 }
 
-
-
 .news-title {
 	margin-bottom: 0px;
 }
@@ -123,7 +111,11 @@ body {
 	color: #999999;
 }
 
-/*Adding news modal */
+/* Adding news modal */
+
+#addnewscontainer{
+	min-width: 250px;
+}
 
 
 .modal{
@@ -134,6 +126,7 @@ body {
 	left:0;
 	top:0;
 	width:100%;
+	min-width: 250px; 
 	height:100%;
 	overflow:auto;
 	background-color:rgb(0,0,0);
@@ -150,72 +143,79 @@ body {
 }
 
 .status-upload form textarea {
-background: none repeat scroll 0 0 #fff;
-border: medium none;
-color: #777777;
-font-size: 14px;
-padding: 20px;
-resize:vertical;
-outline:none;
-border: 1px solid #F2F2F2;
-height: 110px;
-letter-spacing: 0.3px;
-padding: 20px;
-width: 100%;
+	background: none repeat scroll 0 0 #fff;
+	border: medium none;
+	color: #777777;
+	font-size: 14px;
+	padding: 20px;
+	resize:vertical;
+	outline:none;
+	border: 1px solid #F2F2F2;
+	height: 110px;
+	letter-spacing: 0.3px;
+	padding: 20px;
+	width: 100%;
+}
+
+.textarea{
+	width:100%;
 }
 
 .status-upload {
-background: none repeat scroll 0 0 #fff;
-float: left;
-width: 50%;
+	background: none repeat scroll 0 0 #fff;
+	float: left;
+	width: 50%;
+	min-width: 230px;
 }
 
 .form{
-padding: 0 0 0 15px;
+	padding: 0 0 0 15px;
+	width: 80%;
+	min-width: 230px;
 }
 
 .status-upload form {
-float: left;
-width: 100%;
+	float: left;
+	width: 100%;
+	min-width: 230px;
 }
 
 
 .status-upload ul {
-float: left;
-list-style: none osutside none;
-margin: 0;
-padding: 0 0 0 15px;
-width: auto;
+	float: left;
+	list-style: none osutside none;
+	margin: 0;
+	padding: 0 0 0 15px;
+	width: auto;
 }
 
 .status-upload ul > li > a:hover {
-background: none repeat scroll 0 0 #606060;
-color: #fff;
+	background: none repeat scroll 0 0 #606060;
+	color: #fff;
 }
 
 #publish{
-float: right;
-border: 0 20 0 20px;
+	float: right;
+	border: 0 20 0 20px;
 }
 
 .status-upload form button {
-/*float: right;*/
-border: medium none;
-color: #fff;
-border: medium none;
-font-size: 14px;
+	border: medium none;
+	color: #fff;
+	border: medium none;
+	font-size: 14px;
 }
 
 #hl{
-background: none repeat scroll 0 0 #fff;
-border: medium none;
-color: #777777;
-font-size: 14px;
-padding: 20px;
-outline:none;
-border: 1px solid #F2F2F2;
-height: 30px;
-width: 100%;
+	background: none repeat scroll 0 0 #fff;
+	border: medium none;
+	color: #777777;
+	font-size: 14px;
+	padding: 20px;
+	outline:none;
+	border: 1px solid #F2F2F2;
+	height: 30px;
+	width: 100%;
 }
 
 /* miscellaneous */

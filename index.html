@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=420">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>community.news</title>
 
@@ -73,27 +73,27 @@
         <div class="row">
             <div class="col-lg-10 page-header-container">
                 <h1 class="page-header">Latest news</h1>
-				<div class="community-select">
+				<div class="community-area-select">
 				  <div class="select-side">
 					<i class="glyphicon glyphicon-menu-down"></i>
 				  </div>
 				  <select>
-					<option>Area</option>
 					<option>Havana</option>
 					<option>Maxuilili</option>
 					<option>Okuryangava</option>
 					<option>Katutura</option>
 				  </select>
 				</div>
-				<div class="area-select">
+				<div class="community-area-select">
 				  <div class="select-side">
 					<i class="glyphicon glyphicon-menu-down"></i>
 				  </div>
 				  <select>
-					<option>Section</option>
+					<option>All news</option>
+					<option>Most likes</option>
+					<option>Events</option>
 					<option>Education</option>
 					<option>Politics</option>
-					<option>Events</option>
 					<option>Children</option>
 					<option>Health</option>
 					<option>Market</option>
@@ -233,7 +233,7 @@
     <!--Modal window for adding a news item-->
     <div id="add" class="modal">
         <div class="modal-content animate-zoom">
-            <div class="container">
+            <div class="container" id="addnewscontainer">
 				<h2>Add a news item</h2>
 					<div class="status-upload">
 						<form>
@@ -259,11 +259,17 @@
 	<div id="footer">
 		<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
 			<div class="row" id="bottomNav">
+<<<<<<< HEAD
 
 				<div class="col-xs-3 text-center"><a href="index.html"><i class="glyphicon glyphicon-list"></i><br>List</a></div>
 				<div class="col-xs-3 text-center"><a href="map.html"><i class="glyphicon glyphicon-map-marker"></i><br>Map</a></div>
 				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-plus-sign"></i><span class="addbtn" onclick="document.getElementById('add').style.display='block'"><br>Add</span></li></div>
 
+=======
+				<div class="col-xs-3 text-center"><a href="index.html"><i class="glyphicon glyphicon-list"></i><br>List</a></div>
+				<div class="col-xs-3 text-center"><a href="map.html"><i class="glyphicon glyphicon-map-marker"></i><br>Map</a></div>
+				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-plus-sign"></i><span class="addbtn" onclick="document.getElementById('add').style.display='block'"><br>Add</span></li></div>
+>>>>>>> origin/master
 				<div class="col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-search"></i><br>Search</a></div>
 			</div>
 		</div>
